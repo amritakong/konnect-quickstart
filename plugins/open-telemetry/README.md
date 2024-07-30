@@ -5,13 +5,23 @@
 
 - [What is Open Telemetry](#what-is-the-Open Telemetry)
 - [Watch the video on how to use the Open Telemetry plugin](#watch-the-video-on-how-to-use-the-[INSERT PLUGIN]plugin) 
-- ![Installation using Deck](./plugins/open-telemetry/plugins/open-telemetry/kong.yaml)
+- [Installation using Deck](./plugins/open-telemetry/plugins/open-telemetry/kong.yaml)
 - [Installation using Admin API](Installation-using-Admin-API)
 - [Installation using KIC](Installation-using-KIC)
 
 ## What is the Open Telemetry?
 
-OpenTelemetry provides a single, open source standard, and a set of technologies to capture and export metrics, traces, and logs from your cloud-native applications and infrastructure.
+OpenTelemetry provides a single, open source standard, and a set of technologies to capture and export metrics, traces, and logs from your cloud-native applications and infrastructure to an OTLP-compatible server.
+
+Pre-requisite: Enable the OpenTelemetry tracing capability in Kong Gateway’s configuration
+
+tracing_instrumentations = all, Valid values can be found in the [Kong’s configuration](https://docs.konghq.com/gateway/latest/reference/configuration/#tracing_instrumentations). 
+tracing_sampling_rate = 1.0: Tracing instrumentation sampling rate. Tracer samples a fixed percentage of all spans following the sampling rate. Set the sampling rate to a lower value to reduce the impact of the instrumentation on Kong Gateway’s proxy performance in production.
+
+to your 
+
+tracing_instrumentations = all, Valid values can be found in the Kong’s configuration.
+tracing_sampling_rate = 1.0: Tracing instrumentation sampling rate. Tracer samples a fixed percentage of all spans following the sampling rate. Set the sampling rate to a lower value to reduce the impact of the instrumentation on Kong Gateway’s proxy performance in production.
 
 How it works with Konnect
 
@@ -22,7 +32,7 @@ How it works with Konnect
 3. Proxy to endpoint
 4. Check http logging platform (Elastic) to see the traces
 
-![Http log](../../images/HTTP-Log.png)
+
 
 ## Watch the video on how to use the Open Telemetry plugin
 
