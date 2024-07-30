@@ -1,0 +1,9 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: open-telemetry-plugin
+  namespace: testing
+  annotations:
+    kubernetes.io/ingress.class: kong
+config: 
+plugin: open-telemetry
