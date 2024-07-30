@@ -13,18 +13,18 @@
 
 OpenTelemetry provides a single, open source standard, and a set of technologies to capture and export metrics, traces, and logs from your cloud-native applications and infrastructure to an OTLP-compatible server.
 
-Pre-requisite: Enable the OpenTelemetry tracing capability in Kong Gateway’s configuration
+Pre-requisite: Enable the OpenTelemetry tracing capability in Kong Gateway’s configuration - Valid values can be found in the [Kong’s configuration](https://docs.konghq.com/gateway/latest/reference/configuration/#tracing_instrumentations).
 
-`tracing_instrumentations = all`, Valid values can be found in the [Kong’s configuration](https://docs.konghq.com/gateway/latest/reference/configuration/#tracing_instrumentations).
+`tracing_instrumentations = all`
  
-`tracing_sampling_rate = 1.0` Tracing instrumentation sampling rate. 
+`tracing_sampling_rate = 1.0` 
 
 How it works with Konnect
 
 1. Create a Service and Route
 2. Enable Kong’s Open Telemetry Plugin configuring
-   -  HTTP endpoint ending with /v1/traces
-   -  Bearer Authorisation Header in the form of Authorization: Bearer xxxxxxxxxx 
+   -  HTTP endpoint ending with `/v1/traces`
+   -  Bearer Authorisation Header in the form of `Authorization: Bearer xxxxxxxxxx`
 3. Proxy to endpoint
 4. Check OTLP-compatible platform (E.G: Elastic, Grafana, Datadog) to see the traces
 
