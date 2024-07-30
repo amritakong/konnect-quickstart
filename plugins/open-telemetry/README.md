@@ -5,7 +5,7 @@
 
 - [What is Open Telemetry](#what-is-the-Open Telemetry)
 - [Watch the video on how to use the Open Telemetry plugin](#watch-the-video-on-how-to-use-the-[INSERT PLUGIN]plugin) 
-- [Installation using Deck](./plugins/open-telemetry/plugins/open-telemetry/kong.yaml)
+- ![Installation using Deck](./plugins/open-telemetry/plugins/open-telemetry/kong.yaml)
 - [Installation using Admin API](Installation-using-Admin-API)
 - [Installation using KIC](Installation-using-KIC)
 
