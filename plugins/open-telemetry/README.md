@@ -15,9 +15,9 @@ OpenTelemetry provides a single, open source standard, and a set of technologies
 
 Pre-requisite: Enable the OpenTelemetry tracing capability in Kong Gateway’s configuration
 
-tracing_instrumentations = all, Valid values can be found in the [Kong’s configuration](https://docs.konghq.com/gateway/latest/reference/configuration/#tracing_instrumentations).
+`tracing_instrumentations = all`, Valid values can be found in the [Kong’s configuration](https://docs.konghq.com/gateway/latest/reference/configuration/#tracing_instrumentations).
  
-tracing_sampling_rate = 1.0: Tracing instrumentation sampling rate. Tracer samples a fixed percentage of all spans following the sampling rate.
+`tracing_sampling_rate = 1.0` Tracing instrumentation sampling rate. 
 
 How it works with Konnect
 
