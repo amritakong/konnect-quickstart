@@ -75,6 +75,6 @@ pod/kong-gateway-6bcb9d8d7c-6z8pr      1/1     Running   0          2m48s
 2. **Add Ingress Resource:** `kubectl apply -f 2-echo-ingress.yaml`
 3. **Change URL and Authorisation value** in `3-open-telemetry-plugin.yaml` insert your valid url and bearer authorisation token
 4. **Note: `konghq.com/plugins: open-telemetry` ingress annotation is already present for the plugin**
-5. **Proxy to the endpoint:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/open-telemetry`
+5. **Proxy to the endpoint:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/opentelemetry`
 6. **Add the plugin resource:** `kubectl apply -f 3-open-telemetry-plugin.yaml`
 7. **Proxy to the endpoint, plugin is now enabled:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/opentelemetry`
