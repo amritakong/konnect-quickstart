@@ -11,6 +11,8 @@
 
 ## What is the Open Telemetry?
 
+OpenTelemetry provides a single, open source standard, and a set of technologies to capture and export metrics, traces, and logs from your cloud-native applications and infrastructure.
+
 ## Watch the video on how to use the Open Telemetry plugin
 
 <!--
