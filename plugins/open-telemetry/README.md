@@ -24,9 +24,9 @@ How it works with Konnect
 1. Create a Service and Route
 2. Enable Kong’s Open Telemetry Plugin configuring
    -  HTTP endpoint ending with /v1/traces
-   -  Bearer Authorisation Header in the form of Authorization: Bearer xxxx 
+   -  Bearer Authorisation Header in the form of Authorization: Bearer xxxxxxxxxx 
 3. Proxy to endpoint
-4. Check http logging platform (Elastic) to see the traces
+4. Check OTLP-compatible platform (E.G: Elastic, Grafana, Datadog) to see the traces
 
 
 
@@ -74,6 +74,6 @@ pod/kong-gateway-6bcb9d8d7c-6z8pr      1/1     Running   0          2m48s
 1. **Install Echo deployment:** `kubectl apply -f 1-create-echo.yaml`
 2. **Add Ingress Resource:** `kubectl apply -f 2-echo-ingress.yaml` 
 3. **Note: `konghq.com/plugins: <plugin-name>` ingress annotation is already present for the plugin**
-4. **Proxy to the endpoint:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/file-log`
-5. **Add the plugin resource:** `kubectl apply -f 3-plugin-name-plugin.yaml`
-6. **Proxy to the endpoint, plugin is now enabled:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/file-log`
+4. **Proxy to the endpoint:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/open-telemetry`
+5. **Add the plugin resource:** `kubectl apply -f 3-open-telemetry-plugin.yaml`
+6. **Proxy to the endpoint, plugin is now enabled:** Using insomnia or `curl http://<kong-proxy-endpoint>:<port>/opentelemetry`
