@@ -13,6 +13,17 @@
 
 OpenTelemetry provides a single, open source standard, and a set of technologies to capture and export metrics, traces, and logs from your cloud-native applications and infrastructure.
 
+How it works with Konnect
+
+1. Create a Service and Route
+2. Enable Kong’s Open Telemetry Plugin configuring
+   -  HTTP endpoint ending with /v1/traces
+   -  Bearer Authorisation Header in the form of Authorization: Bearer xxxx 
+3. Proxy to endpoint
+4. Check http logging platform (Elastic) to see the traces
+
+![Http log](../../images/HTTP-Log.png)
+
 ## Watch the video on how to use the Open Telemetry plugin
 
 <!--
